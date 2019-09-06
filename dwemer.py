@@ -23,7 +23,7 @@ def main(text, font_type, font_size, image_file):
         d.text((font_size // 2,0), text, font=fnt, fill=(0, 0, 0))
         img.save('dwemer.png')
     if image_file:
-        text = pytesseract.image_to_string(Image.open('dwemer.png'), lang='Dwemer', config=r'--tessdata-dir tesseract_data')
+        text = pytesseract.image_to_string(Image.open(image_file), lang='Dwemer', config=r'--tessdata-dir tesseract_data')
         print(text)
 
 if __name__ == "__main__":
