@@ -11,10 +11,10 @@ __fonts = {
 }
 
 @click.command()
-@click.option('--write', 'text', default=None)
+@click.option('--write', 'text', default=None, type=str, help='the text to translate')
 @click.option('--font-type', 'font_type', type=click.Choice(__fonts.keys()), default='normal')
 @click.option('--font-size', 'font_size', type=int, default=15)
-@click.option('--read', 'image_file', default=None)
+@click.option('--read', 'image_file', default=None, type=str, help='the path to your dwemer image')
 def main(text, font_type, font_size, image_file):
     if text:
         img = Image.new('RGB', (((font_size * len(text)) // 2) + font_size, font_size), color = (255, 255, 255))
