@@ -6,7 +6,7 @@
 # Usage:
 ### text to dwemer:
 ````
-python dwemer.py --write='text to write' [--output=png_file_name] [--font-size=size] [--font-type=type]
+python dwemer.py --write='path_to_file.txt' [--output=png_file_name] [--font-size=size] [--font-type=type]
 ````
 ### dwemer to text:
 ````
