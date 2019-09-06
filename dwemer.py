@@ -27,7 +27,7 @@ def main(text_file, font_type, font_size, image_file, output_file):
         text = ''
         with open(text_file) as tf:
             text = tf.read()
-        text = re.sub(f'[^{__chars}]', ' ', text).split('\n')
+        text = re.sub(f'[^{__chars}]', ' ', text)[:-1].split('\n')
         img_width = ((font_size * max(set(map(len, text)))) // 2) + font_size
         img_height = font_size * len(text)
         img = Image.new('RGB', (img_width, img_height), color = (255, 255, 255))
